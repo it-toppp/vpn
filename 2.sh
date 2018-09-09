@@ -21,7 +21,7 @@ sudo firewall-cmd --permanent --add-port=$VPN_PORT/udp
 sudo firewall-cmd --reload
 
 sudo mkdir -p /var/lib/openvpn/mongodb
-
+sudo docker rm -f openvpn
 sudo docker run \
     --name openvpn \
     --privileged \
