@@ -38,6 +38,7 @@ echo "Please Copy Code Go To Installer"
 pritunl setup-key
 
 MYIP=$(curl -4 https://icanhazip.com/);
-echo "Pritunl    :  https://$MYIP"
-echo "Please Copy Code Go To Installer"
-pritunl setup-key
+KEY=$(pritunl setup-key);
+echo "open in web browser    :  https://$MYIP"
+echo "Please Copy Code Go To Installer : $KEY"
+
