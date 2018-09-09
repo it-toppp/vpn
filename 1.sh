@@ -25,7 +25,7 @@ sudo docker run \
     --detach \
     --privileged \
     --restart=always \
-    -p $VPN_PORT:1194/udp \
+    -p $VPN_PORT:$VPN_PORT/udp \
     -p 8080:80/tcp \
     -p $SSL_PORT:443/tcp \
     -v /var/lib/openvpn/mongodb:/var/lib/mongodb\
