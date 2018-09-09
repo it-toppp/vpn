@@ -1,4 +1,4 @@
-#selin
+#selinux
 sudo sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/sysconfig/selinux || true
 sudo setenforce 0
 
