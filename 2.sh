@@ -13,7 +13,7 @@ sudo systemctl enable docker
 
 # Enable Firewall
 sudo firewall-cmd --permanent --add-port={80,443,8081,8080}/tcp
-sudo firewall-cmd --permanent--add-port=1194/udp
+sudo firewall-cmd --permanent --add-port=1194/udp
 sudo firewall-cmd --reload
 pritunl setup-key
 
