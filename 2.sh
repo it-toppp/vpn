@@ -1,5 +1,5 @@
 SSL_PORT=8081;
-VPN_PORT=1194
+VPN_PORT=1194;
 MYIP=$(curl -4 https://icanhazip.com/);
 
 #SELINUX
@@ -19,7 +19,6 @@ sudo systemctl enable docker
 sudo firewall-cmd --permanent --add-port={80,443,$SSL_PORT,8080}/tcp
 sudo firewall-cmd --permanent --add-port=$VPN_PORT/udp
 sudo firewall-cmd --reload
-pritunl setup-key
 
 sudo mkdir -p /var/lib/openvpn/mongodb
 
@@ -37,7 +36,6 @@ sudo docker run \
     -v /var/lib/openvpn:/var/lib/pritunl \
       jippi/pritunl
 
-#KEY=$(pritunl setup-key);
 echo "open in web browser    :  https://$MYIP:$SSL_PORT"
 echo "Enter login/password : pritunl/pritunl"
 #docker exec -it openvpn /bin/bash | pritunl reset-password
