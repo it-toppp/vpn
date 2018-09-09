@@ -35,7 +35,7 @@ sudo docker run \
     -v /var/lib/openvpn/mongodb:/var/lib/mongodb\
     -v /var/lib/openvpn:/var/lib/pritunl \
       jippi/pritunl
-
+echo "_________________________________________________________________________________"
 echo "open in web browser    :  https://$MYIP:$SSL_PORT"
 echo "Enter login/password : pritunl/pritunl"
 #docker exec -it openvpn /bin/bash | pritunl reset-password
