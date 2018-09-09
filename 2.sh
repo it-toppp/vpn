@@ -31,8 +31,10 @@ sudo docker run \
     -p 8081:443/tcp \
     -v /var/lib/openvpn/mongodb:/var/lib/mongodb\
     -v /var/lib/openvpn:/var/lib/pritunl \
-    #-v /var/lib/openvpn/pritunl.conf:/etc/pritunl.conf \
-    jippi/pritunl
-
+      jippi/pritunl
+MYIP=$(curl -4 https://icanhazip.com/);
+#KEY=$(pritunl setup-key);
+echo "open in web browser    :  https://$MYIP"
+echo "Enter login/password : pritunl/pritunl"
 #docker exec -it openvpn /bin/bash | pritunl reset-password
     
