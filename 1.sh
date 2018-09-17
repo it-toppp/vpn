@@ -21,7 +21,6 @@ sudo mkdir -p /var/lib/openvpn/mongodb
 sudo docker rm -f openvpn
 sudo docker run \
     --name openvpn \
-    --privileged \
     --detach \
     --privileged \
     --restart=always \
