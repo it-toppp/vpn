@@ -1,5 +1,5 @@
-SSL_PORT=31337;
-VPN_PORT=31337;
+SSL_PORT=4433;
+VPN_PORT=1194;
 MYIP=$(curl -4 https://icanhazip.com/);
 
 #SELINUX
