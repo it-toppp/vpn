@@ -16,9 +16,9 @@ sudo systemctl enable docker
 #sudo chmod +x /usr/local/bin/docker-compose
 
 # Enable Firewall
-sudo firewall-cmd --permanent --add-port={80,443,$SSL_PORT,8080}/tcp
-sudo firewall-cmd --permanent --add-port=$VPN_PORT/udp
-sudo firewall-cmd --reload
+#sudo firewall-cmd --permanent --add-port={80,443,$SSL_PORT,8080}/tcp
+#sudo firewall-cmd --permanent --add-port=$VPN_PORT/udp
+#sudo firewall-cmd --reload
 
 sudo mkdir -p /var/lib/openvpn/mongodb
 sudo docker rm -f openvpn
