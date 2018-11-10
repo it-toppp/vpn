@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ###################
-# Install git #
-apt-get install git mc -y
+rm -R /root/doublevpn &> /dev/null
+rm -R /root/1.sh &> /dev/null
 ###################
 # Install ansible #
 if ! grep -q "ansible/ansible" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
@@ -53,17 +53,11 @@ sudo docker run \
     -v /var/lib/openvpn:/var/lib/pritunl \
       jippi/pritunl
 
-rm -R /root/install.sh
-echo  "Please copy this content to your TunSafe configuration file"
 echo "#####################################################################################################################"
-echo ""
-echo "$CNF"
-echo ""
-echo "#####################################################################################################################"
-rm -R /root/doublevpn
-
 
 echo "open in web browser    :  https://$MYIP"
 echo "Enter login/password   :  pritunl/pritunl"
-#docker exec -it openvpn /bin/bash | pritunl reset-password
 
+#docker exec -it openvpn /bin/bash | pritunl reset-password
+rm -R /root/doublevpn &> /dev/null
+rm -R /root/1.sh &> /dev/null
