@@ -29,7 +29,7 @@ MYIP=$(curl -4 https://icanhazip.com/);
 
 echo "#####################################################################################################################"
 
-cd /root
-wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
-rm -R /root/doublevpn &> /dev/null
-rm -R /root/1.sh &> /dev/null
+#cd /root
+#wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
+#rm -R /root/doublevpn &> /dev/null
+#rm -R /root/1.sh &> /dev/null
