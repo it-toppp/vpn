@@ -46,7 +46,6 @@ sudo docker run \
     --name openvpn \
     --privileged \
     --detach \
-    --privileged \
     --restart=always \
     --net=host \
     -v /var/lib/openvpn/mongodb:/var/lib/mongodb\
